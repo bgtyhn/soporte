@@ -4,6 +4,7 @@
 	<title>Gracias por probar</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
@@ -16,8 +17,18 @@
 			<h1>Bienvenido</h1>
 			<h4>Con este botón obtendrás un documento útil :)</h4>
 			<br>
-			<a class="white blue-text waves-effect waves-light btn">ir</a>
-			<p>token: </p>
+			<a target="_blank" href="{{ redirect.fileAddress }}" class="white teal-text waves-effect waves-light btn-large" style="min-width: 15%">ir</a>
+			<br><br>
+			<div class="row">
+				<div class="col s10 offset-s1 left-align">
+					<ul class="collapsible popout" data-collapsible="accordion">
+						<li>
+							<div class="collapsible-header teal-text"><i class="material-icons">subject</i>Token:</div>
+							<div class="collapsible-body"><p style='word-wrap: break-word'>{{ redirect.token }}</p></div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 
